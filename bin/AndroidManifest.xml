@@ -3,19 +3,15 @@
     package="com.example.theworks"
     android:versionCode="1"
     android:versionName="1.0" >
-
-    <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="17" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
-        android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:label="@string/app_name" >
         <activity
             android:name="com.example.theworks.Menu"
-            android:label="@string/title_activity_menu" >
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,27 +20,27 @@
         </activity>
         <activity
             android:name="com.example.theworks.Settings"
-            android:label="@string/title_activity_settings" >
+            android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="android.intent.action.SETTINGS" />
+                <action android:name="com.example.theworks.SETTINGS" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.example.theworks.InternalStore"
-            android:label="@string/title_activity_internal_store" >
+            android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="android.intent.action.INTERNALSTORE" />
+                <action android:name="com.example.theworks.INTERNALSTORE" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.example.theworks.Reading"
-            android:label="@string/title_activity_reading" >
+            android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="android.intent.action.INTERNALSTORE" />
+                <action android:name="com.example.theworks.READING" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -53,19 +49,25 @@
             android:name="com.example.theworks.The40SeriesActivity"
             android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="android.intent.action.ST" />
+                <action android:name="com.example.theworks.ST" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.example.theworks.Numbers"
-            android:label="@string/title_activity_numbers" >
+            android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="android.intent.action.NUMBERS" />
+                <action android:name="com.example.theworks.NUMBERS" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.theworks.SaveToSD"
+            android:label="@string/app_name" >
+            <action android:name="com.example.theworks.SAVETOSD"/>
+            <category android:name="android.intent.category.DEFAULT"/>
         </activity>
     </application>
 
